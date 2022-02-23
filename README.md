@@ -2,6 +2,13 @@
 A  casual blog to record things I learned on internet related to programming.
 
 
+Timeless sources:   
+- https://github.com/Asabeneh/30-Days-Of-JavaScript   
+- https://github.com/leonardomso/33-js-concepts   
+- https://github.com/ossu/computer-science   
+- https://github.com/bradtraversy/design-resources-for-developers
+
+
  22/2/2022
 
 - In Node.js, `console.log()` is actually:
