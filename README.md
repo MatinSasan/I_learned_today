@@ -7,6 +7,7 @@ Timeless sources:
 - https://github.com/leonardomso/33-js-concepts   
 - https://github.com/ossu/computer-science   
 - https://github.com/bradtraversy/design-resources-for-developers
+- https://cs50.harvard.edu/x/2022/
 
 
  22/2/2022
