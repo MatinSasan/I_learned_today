@@ -23,3 +23,7 @@ Usage example: for formatting all the copy-pasted list of words that are not pro
 
 source: https://www.youtube.com/watch?v=QcXlyriZVa8
 
+
+24/2/2022
+
+- one can open up a folder in the current VS Code window, which by default opens up a new window, use `-r` as in `code -r [your dir]`
