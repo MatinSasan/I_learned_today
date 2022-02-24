@@ -8,6 +8,7 @@ Timeless sources:
 - https://github.com/ossu/computer-science   
 - https://github.com/bradtraversy/design-resources-for-developers
 - https://cs50.harvard.edu/x/2022/
+- https://cs50.harvard.edu/web/2020/
 
 
  22/2/2022
