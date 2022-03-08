@@ -28,4 +28,8 @@ source: https://www.youtube.com/watch?v=QcXlyriZVa8
 
 24/2/2022
 
-- one can open up a folder in the current VS Code window, which by default opens up a new window, use `-r` as in `code -r [your dir]`
+- one can open up a folder in the current VS Code window, which by default opens up a new window, use `-r` as in `code -r [your dir]`   
+
+
+3/8/2022   
+- `if` statement, if not followed by `else` or `else if`, must `return` something within the brackets (or its lexical scope, if we omit the brackets), in order to work. Even if a function, method or any expression would return something, in that lexical scope the `return` keyword is still needed.
