@@ -37,3 +37,24 @@ source: https://www.youtube.com/watch?v=QcXlyriZVa8
 - to print a `function` in `console.log()` simply use the inbuilt function object method called `toString()`. `toString()` is also available for Array object.   
    
 - `...args` as multiple arguments for a function's parameter requires the 3 dots `...`, whereas within the function no need to add 3 dots `...` and `args` alone is valid.
+  
+    
+   
+9/3/2022    
+- a function that does the deep clone (in contrast to shallow clone `[...x]/{...x}`):   
+ ```js
+const deepClone = (obj) => {
+  if (typeof obj !== 'object' || obj === null) return obj;
+
+  // create an array or object to hold the value
+  const newObj = Array.isArray(obj) ? [] : {};
+
+  for (let key in obj) {
+    const value = obj[key];
+    // recursive call for nested objects and arrays
+    newObj[key] = deepClone(value);
+  }
+
+  return newObj;
+};   
+```
