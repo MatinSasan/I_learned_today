@@ -58,3 +58,44 @@ const deepClone = (obj) => {
   return newObj;
 };   
 ```
+   
+   
+10/3/2022   
+- to center an item, without using flex or grid:   
+first the html template:   
+```html
+<div class='outer-box'>
+ <div class='inner-box'></div>
+</div>
+```   
+now the version #1 with absolute positionng, which used to be an old, popular way:   
+```css
+.outer-box {
+<!--  styling code -->
+  position: relative;
+}
+
+.inner-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+<!--  styling code -->
+}
+```   
+Its Codepen link: https://codepen.io/matinsasan/pen/jOagyOX   
+
+Now, using absolute positioning #2, using `inset`, plus `margin: auto`, in CSS:   
+
+```css
+<!-- same code as the previous CSS snippet -->
+
+.inner-box {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+<!--  styling code -->
+}
+
+```   
+Its Codepen link: https://codepen.io/matinsasan/pen/GROVrOG
