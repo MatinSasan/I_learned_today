@@ -36,7 +36,8 @@ source: https://www.youtube.com/watch?v=QcXlyriZVa8
    
 - to print a `function` in `console.log()` simply use the inbuilt function object method called `toString()`. `toString()` is also available for Array object.   
    
-- `...args` as multiple arguments for a function's parameter requires the 3 dots `...`, whereas within the function no need to add 3 dots `...` and `args` alone is valid.
+- `...args` as multiple arguments for a function's parameter requires the 3 dots `...`, whereas within the function no need to add 3 dots `...` and `args` alone is valid.   
+Note: however, when passing it within a function, as an argument, to a nested function or a returned function, `...args` syntax must be preserved.
   
     
    
