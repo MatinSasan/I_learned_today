@@ -99,4 +99,12 @@ Now, using absolute positioning #2, using `inset`, plus `margin: auto`, in CSS:
 }
 
 ```   
-Its Codepen link: https://codepen.io/matinsasan/pen/GROVrOG
+Its Codepen link: https://codepen.io/matinsasan/pen/GROVrOG   
+
+   
+13/3/2022   
+- `for...of` loop is for `array`, whereas `for... in` loop is for `object`.   
+`.entries()` method gives index and value for array:   
+`for (let [index, value] of someArray)`,   
+whereas key-value pair for object:   
+`for (const [key, value] in someObject)`. 
