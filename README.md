@@ -108,3 +108,6 @@ Its Codepen link: https://codepen.io/matinsasan/pen/GROVrOG
 `for (let [index, value] of someArray.entries())`,   
 whereas key-value pair for object:   
 `for (const [key, value] in someObject.entries())`. 
+   
+25/3/2022   
+- an often used `CSS` shorthand `background` should best be avoided, as it can interfere with, for example, `background-color` and `background-image` to work properly.   
