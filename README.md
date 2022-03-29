@@ -110,4 +110,8 @@ whereas key-value pair for object:
 `for (const [key, value] in someObject.entries())`. 
    
 25/3/2022   
-- an often used `CSS` shorthand `background` should best be avoided, as it can interfere with, for example, `background-color` and `background-image` to work properly.   
+- an often used `CSS` shorthand `background` should best be avoided, as it can interfere with, for example, `background-color` and `background-image` to work properly.      
+ 
+29/3/2022   
+- React updates state in batches:   
+in setState method, for example, updating through `setCount = () => count+1` within a function call multiple times would fail and still use the original, previous state as a reference, while using `setCount = prev => prev+1` by passing the `previous state` as an argument we can accomplish this.
