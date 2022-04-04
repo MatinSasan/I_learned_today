@@ -115,3 +115,8 @@ whereas key-value pair for object:
 29/3/2022   
 - React updates state in batches:   
 in setState method, for example, updating through `setCount = () => count+1` within a function call multiple times would fail and still use the original, previous state as a reference, while using `setCount = prev => prev+1` by passing the `previous state` as an argument we can accomplish this.
+   
+4/4/2022   
+- Some web events can cause cost performance badly, like input, mousemove, etc. where there might be heavy API usage.   
+With the help of `debounce` and `throttle` we can address this issue.   
+Link to the gist of how to implement debounce and throttle: https://gist.github.com/MatinSasan/25e7ba3837df68c0cc1d2ebfab8a5552
