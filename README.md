@@ -125,4 +125,5 @@ Link to the gist of how to implement debounce and throttle: https://gist.github.
 - in CSS, whenever we assign `padding` with `width` to an element, we use `box-sizing:border-box` to keep the math as simple as possible.   
 - to center with flexbox (will update for grid and some tricks):  
 simply add to the parent element, along with `display:flex`, `justify-content:center` to horizontally center as well as `align-items:center` to vertically center.   
-Note that in order to make `align-items` work, we have to add `height` to the parent element, which is usually `100vh` (vh: a percentage of the full viewport height).
+Note that in order to make `align-items` work, we have to add `height` to the parent element, which is usually `100vh` (vh: a percentage of the full viewport height).   
+To center just one item, the parent element has `display:flex` while the child one `margin:auto`. 
