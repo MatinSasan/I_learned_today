@@ -127,3 +127,8 @@ Link to the gist of how to implement debounce and throttle: https://gist.github.
 simply add to the parent element, along with `display:flex`, `justify-content:center` to horizontally center as well as `align-items:center` to vertically center.   
 Note that in order to make `align-items` work, we have to add `height` to the parent element, which is usually `100vh` (vh: a percentage of the full viewport height).   
 To center just one item, the parent element has `display:flex` while the child one `margin:auto`. 
+   
+14/4/20222   
+- in `React` to clean up after in `useEffect` all we need is to use within that function:   
+`return () => { *code to clean up* }`   
+It will run first everytime `useEffect` gets called.
