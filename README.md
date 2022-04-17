@@ -131,4 +131,36 @@ To center just one item, the parent element has `display:flex` while the child o
 14/4/20222   
 - in `React` to clean up after in `useEffect` all we need is to use within that function:   
 `return () => { *code to clean up* }`   
-It will run first everytime `useEffect` gets called.
+It will run first everytime `useEffect` gets called.   
+
+17/4/2022   
+- Advanced Async/Await, serialized:   
+```js
+const getPost = async (id) => {
+  return await (
+    await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+  ).json();
+};
+
+// serialized
+
+const getPostsSerializedFor = async (ids) => {
+  for (const id of ids) {
+    const data = await getPost(id);
+    console.log(data);
+  }
+};
+
+// OR
+
+const getPostsSerializedReduce = async (ids) => {
+  await ids.reduce(async (acc, id) => {
+    // waits for the previous item to complete
+    await acc;
+    // get the next item
+    const post = await getPost(id);
+    console.log(post)
+  }, Promise.resolve()) // allows to get the first item of the result
+  console.log("I'll wait on you");
+}
+```
