@@ -164,3 +164,7 @@ const getPostsSerializedReduce = async (ids) => {
   console.log("I'll wait on you");
 }
 ```
+   
+26/4/2022   
+- in Typescript, the error `Cannot redeclare block-scoped variable` occurs because the name variable is declared somewhere in the typings for the DOM library, so the global type definition clashes with the local variable declaration.   
+To solve the problem, we need to convert the ts file to an ES module, by adding `export {}` as a module is a file that contains at least 1 import or export statement.
