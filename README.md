@@ -176,7 +176,7 @@ For example:
    
 28/4/2022   
 - for `jest` to have intellisense in `VS Code`:   
-`npm i -D @types/jest` and then create a json file in the root directory with the following code:   
+`npm i -D @types/jest`, then create a json file, named `jsconfig.json`, in the root directory with the following code:   
 ```json
 {
   "typeAcquisition": {
