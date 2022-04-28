@@ -173,3 +173,16 @@ To solve the problem, we need to convert the ts file to an ES module, by adding 
 - in `npx` in order to force the package manager to be `npm` instead of `yarn`, use `--use-npm`.   
 For example:   
 `npx create-next-app my-app --use-npm`
+   
+28/4/2022   
+- for `jest` to have intellisense in `VS Code`:   
+`npm i -D @types/jest` and then create a json file in the root directory with the following code:   
+```json
+{
+  "typeAcquisition": {
+    "include": [
+      "jest"
+    ]
+  }
+}
+```
