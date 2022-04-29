@@ -186,3 +186,9 @@ For example:
   }
 }
 ```
+   
+30/4/2022   
+- in `virtual environment` of, for example, a `django` project, `pip` might not install the packages within the venv.   
+To fix this, first check the dir of `pip` with `which pip` in the terminal. If not showing the path to the venv dir, then it's incorrect.   
+Delete the venv folder, and recreate it, for example `virtualenv env`. `pip` path will be correct this time.   
+Now reinstall all those packages.
