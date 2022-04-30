@@ -191,4 +191,7 @@ For example:
 - in `virtual environment` of, for example, a `django` project, `pip` might not install the packages within the venv.   
 To fix this, first check the dir of `pip` with `which pip` in the terminal. If not showing the path to the venv dir, then it's incorrect.   
 Delete the venv folder, and recreate it, for example `virtualenv env`. `pip` path will be correct this time.   
-Now reinstall all those packages.
+Now reinstall all those packages.   
+- the issue above happened to me becauseo of moving venv folder to the app project.   
+To start the `django` project within the same dir, there's a `.` needed at the end:   
+`django-admin createproject name_of_project .`
