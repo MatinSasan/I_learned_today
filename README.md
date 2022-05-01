@@ -195,3 +195,6 @@ Now reinstall all those packages.
 - the issue above happened to me becauseo of moving venv folder to the app project.   
 To start the `django` project within the same dir, there's a `.` needed at the end:   
 `django-admin createproject name_of_project .`
+   
+1/5/2022   
+- in `VS Code` to quickly wrap a selected text/piece of code with html tags, hit `f1` or `ctrl+shift+p`, and type `wrap` which shows `Wrap with abbreviation`, hit enter, type, for example `div` and it will be wrapped so.
