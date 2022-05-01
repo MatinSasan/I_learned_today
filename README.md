@@ -197,6 +197,11 @@ To start the `django` project within the same dir, there's a `.` needed at the e
 `django-admin createproject name_of_project .`
    
 1/5/2022   
-- in `VS Code` to quickly wrap a selected text/piece of code with html tags, hit `f1` or `ctrl+shift+p`, and type `wrap` which shows `Wrap with abbreviation`, hit enter, type, for example `div` and it will be wrapped so.
+- in `VS Code` to quickly wrap a selected text/piece of code with html tags, hit `f1` or `ctrl+shift+p`, and type `wrap` which shows `Wrap with abbreviation`, hit enter, type, for example `div` and it will be wrapped so.   
+
 - in `React` a component might double-render, for example, `console.log` ouput is given twice.   
-To fix this, in `index.js` of your react app, comment out `<React.strictMode>` and `</React.strictMode>` and simply let `<App />` inside remain.
+To fix this, in `index.js` of your react app, comment out `<React.strictMode>` and `</React.strictMode>` and simply let `<App />` inside remain.   
+
+- in `flask`, python backend framework, templates won't be updated upon modifying a html file by default.   
+To force modification, add this line `app.config['TEMPLATES_AUTO_RELOAD'] = True`  after `app = Flask(__name__)` and run `flask run`.   
+Note: this will NOT auto-refresh, but only auto-reload. This makes Flask unattractive for developing websites, but good and quick enough to run apis and tests on python.
