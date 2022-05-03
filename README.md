@@ -204,4 +204,10 @@ To fix this, in `index.js` of your react app, comment out `<React.strictMode>` a
 
 - in `flask`, python backend framework, templates won't be updated upon modifying a html file by default.   
 To force modification, add this line `app.config['TEMPLATES_AUTO_RELOAD'] = True`  after `app = Flask(__name__)` and run `flask run`.   
-Note: this will NOT auto-refresh, but only auto-reload. This makes Flask unattractive for developing websites, but good and quick enough to run apis and tests on python.
+Note: this will NOT auto-refresh, but only auto-reload. This makes Flask unattractive for developing websites, but good and quick enough to run apis and tests on python.   
+   
+3/5/2022   
+- to use `Redis` in `windows`, install WLS (Windows Subsystem for Linux): https://docs.microsoft.com/en-us/windows/wsl/install   
+After that, open up a terminal in WSL (in `+` of VS Code's Terminal panel):   
+1. run `sudo apt-get install redis`. If encountered `E: Unable to locate package redis` error, then update using `sudo apt-get update`.   
+2. type `redis-server`, now open a new WSL terminal and start testing with `SET [key] [value]` and `GET [key` if it works.
