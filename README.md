@@ -284,3 +284,8 @@ Initalizing the class is only allowed with keyword arguments, with `kw_only=True
 
 Now you can use to get your tree dir:   
 > tree -d
+   
+- **git**:   
+1. to remove a wrong pushed commit to github, first `git log` then `git push origin +[commit_id]:master`. `+` is to force push.
+2. That was remote change, to locally change to, for example, the last commit: `git reset HEAD~`
+3. now add and commit as usual :)
