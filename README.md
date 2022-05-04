@@ -9,7 +9,7 @@ Timeless sources:
 - https://cs50.harvard.edu/x/2022/
 - https://cs50.harvard.edu/web/2020/
 
-
+------
  22/2/2022
 
 - In Node.js, `console.log()` is actually:
@@ -24,12 +24,12 @@ Usage example: for formatting all the copy-pasted list of words that are not pro
 
 source: https://www.youtube.com/watch?v=QcXlyriZVa8
 
-
+------
 24/2/2022
 
 - one can open up a folder in the current VS Code window, which by default opens up a new window, use `-r` as in `code -r [your dir]`   
 
-
+------
 3/8/2022   
 - `if` statement, if not followed by `else` or `else if`, must `return` something within the brackets (or its lexical scope, if we omit the brackets), in order to work. Even if a function, method or any expression would return something, in that lexical scope the `return` keyword is still needed.    
    
@@ -39,7 +39,7 @@ source: https://www.youtube.com/watch?v=QcXlyriZVa8
 Note: however, when passing it within a function, as an argument, to a nested function or a returned function, `...args` syntax must be preserved.
   
     
-   
+------   
 9/3/2022    
 - a function that does the deep clone (in contrast to shallow clone `[...x]/{...x}`):   
  ```js
@@ -59,7 +59,7 @@ const deepClone = (obj) => {
 };   
 ```
    
-   
+-----   
 10/3/2022   
 - to center an item, without using flex or grid:   
 first the html template:   
@@ -100,38 +100,38 @@ Now, using absolute positioning #2, using `inset`, plus `margin: auto`, in CSS:
 ```   
 Its Codepen link: https://codepen.io/matinsasan/pen/GROVrOG   
 
-   
+-----   
 13/3/2022   
 - `for...of` loop is for `array`, whereas `for... in` loop is for `object`.   
 `.entries()` method gives index and value for array:   
 `for (let [index, value] of someArray.entries())`,   
 whereas key-value pair for object:   
 `for (const [key, value] in someObject.entries())`. 
-   
+-----  
 25/3/2022   
 - an often used `CSS` shorthand `background` should best be avoided, as it can interfere with, for example, `background-color` and `background-image` to work properly.      
- 
+----- 
 29/3/2022   
 - React updates state in batches:   
 in setState method, for example, updating through `setCount = () => count+1` within a function call multiple times would fail and still use the original, previous state as a reference, while using `setCount = prev => prev+1` by passing the `previous state` as an argument we can accomplish this.
-   
+-----   
 4/4/2022   
 - Some web events can cause cost performance badly, like input, mousemove, etc. where there might be heavy API usage.   
 With the help of `debounce` and `throttle` we can address this issue.   
 Link to the gist of how to implement debounce and throttle: https://gist.github.com/MatinSasan/25e7ba3837df68c0cc1d2ebfab8a5552
-   
+-----   
 9/4/2022   
 - in CSS, whenever we assign `padding` with `width` to an element, we use `box-sizing:border-box` to keep the math as simple as possible.   
 - to center with flexbox (will update for grid and some tricks):  
 simply add to the parent element, along with `display:flex`, `justify-content:center` to horizontally center as well as `align-items:center` to vertically center.   
 Note that in order to make `align-items` work, we have to add `height` to the parent element, which is usually `100vh` (vh: a percentage of the full viewport height).   
 To center just one item, the parent element has `display:flex` while the child one `margin:auto`. 
-   
+-----   
 14/4/20222   
 - in `React` to clean up after in `useEffect` all we need is to use within that function:   
 `return () => { *code to clean up* }`   
 It will run first everytime `useEffect` gets called.   
-
+-----
 17/4/2022   
 - Advanced Async/Await, serialized:   
 ```js
@@ -163,16 +163,16 @@ const getPostsSerializedReduce = async (ids) => {
   console.log("I'll wait on you");
 }
 ```
-   
+-----   
 26/4/2022   
 - in Typescript, the error `Cannot redeclare block-scoped variable` occurs because the name variable is declared somewhere in the typings for the DOM library, so the global type definition clashes with the local variable declaration.   
 To solve the problem, we need to convert the ts file to an ES module, by adding `export {}` as a module is a file that contains at least 1 import or export statement.
-   
+-----   
 27/4/2022   
 - in `npx` in order to force the package manager to be `npm` instead of `yarn`, use `--use-npm`.   
 For example:   
 `npx create-next-app my-app --use-npm`
-   
+------   
 28/4/2022   
 - for `jest` to have intellisense in `VS Code`:   
 `npm i -D @types/jest`, then create a json file, named `jsconfig.json`, in the root directory with the following code:   
@@ -185,7 +185,7 @@ For example:
   }
 }
 ```
-   
+------   
 30/4/2022   
 - in `virtual environment` of, for example, a `django` project, `pip` might not install the packages within the venv.   
 To fix this, first check the dir of `pip` with `which pip` in the terminal. If not showing the path to the venv dir, then it's incorrect.   
@@ -194,7 +194,7 @@ Now reinstall all those packages.
 - the issue above happened to me becauseo of moving venv folder to the app project.   
 To start the `django` project within the same dir, there's a `.` needed at the end:   
 `django-admin createproject name_of_project .`
-   
+------   
 1/5/2022   
 - in `VS Code` to quickly wrap a selected text/piece of code with html tags, hit `f1` or `ctrl+shift+p`, and type `wrap` which shows `Wrap with abbreviation`, hit enter, type, for example `div` and it will be wrapped so.   
 
@@ -204,14 +204,14 @@ To fix this, in `index.js` of your react app, comment out `<React.strictMode>` a
 - in `flask`, python backend framework, templates won't be updated upon modifying a html file by default.   
 To force modification, add this line `app.config['TEMPLATES_AUTO_RELOAD'] = True`  after `app = Flask(__name__)` and run `flask run`.   
 Note: this will NOT auto-refresh, but only auto-reload. This makes Flask unattractive for developing websites, but good and quick enough to run apis and tests on python.   
-   
+------   
 3/5/2022   
 ### Redis In Windows
 - to use `Redis` in `windows`, install WLS (Windows Subsystem for Linux): https://docs.microsoft.com/en-us/windows/wsl/install   
 After that, open up a terminal in WSL (in `+` of VS Code's Terminal panel):   
 1. run `sudo apt-get install redis`. If encountered `E: Unable to locate package redis` error, then update using `sudo apt-get update`.   
 2. type `redis-server`, now open a new WSL terminal and start testing with `SET [key] [value]` and `GET [key` if it works.
-   
+------   
 4/5/2022   
 - in Python, the use of `dataclasses`:   
 Let's take a look at this example below:   
@@ -276,7 +276,7 @@ Here, `frozen=True` makes the objects of the class immutable, `constants` (not t
 ```
 Initalizing the class is only allowed with keyword arguments, with `kw_only=True`.
 - bear in mind that, `@dataclass` is a regular decorator, while `@dataclass([args])` is a callable that returns a decorator.   
-
+------
 4/5/2022   
 - to get a `tree directory` representation, that can be used in `readme.md`, first install `tree` on Linux or WSL:   
 
@@ -293,7 +293,7 @@ Now you can use to get your tree dir:
 3. now add and commit as usual :)   
 
 - **Markdown and relative path**: click the links to learn about how to [Link in Markdown](https://stackoverflow.com/a/16426829/11330560) and [use relative path in them](https://github.community/t/link-to-a-section-in-another-readme-md-file/1130).   
-
+-------
 5/5/2022
 ### Docker In Windows   
 1. install `WSL2` on Windows.
@@ -310,3 +310,26 @@ Now you can use to get your tree dir:
 memory=2GB
 ```
 5. restart Docker. Enjoy preserving your sanity :)
+---------   
+5/5/2022
+### Changing Docker Native Image Location on Windows 10   
+1. access `%LOCALAPPDATA%/Docker/wsl`. There will be 2 folders:   
+- data/ext4.vhdx which is consumed by docker-desktop-data
+- distro/ext4.vhdx which is consumed by docker-desktop 
+2. STOP Docker first, then run `wsl --shutdown` to shut down all WSL distros.
+3. Export docker-desktop-data to tar file (E can be any preferred path):
+```
+wsl --export docker-desktop-data E:\docker-desktop\docker-desktop-data.tar
+```
+- be sure to create `docker-desktop` main dir to not run into path error.
+4. unregister current docker-desktop-data distro:   
+```
+wsl --unregister docker-desktop-data
+```
+5. import docker-desktop-data distro from tar file:
+```
+wsl --import docker-desktop-data E:\docker-desktop\data E:\docker-desktop\docker-desktop-data.tar --version 2
+```
+- you can delete tar file now.
+- in this step, we may meet the error of cannot create a specific network. Just re-run the import command.
+6. Run Docker Desktop. You just saved your C drive from running out of space :)
