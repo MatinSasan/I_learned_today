@@ -275,3 +275,4 @@ Here, `frozen=True` makes the objects of the class immutable, `constants` (not t
 @dataclass(kw_only=True)
 ```
 Initalizing the class is only allowed with keyword arguments, with `kw_only=True`.
+> bear in mind that, `@dataclass` is a regular decorator, while `@dataclass([args])` is a callable that returns a decorator.
