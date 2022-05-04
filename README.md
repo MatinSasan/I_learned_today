@@ -286,6 +286,8 @@ Now you can use to get your tree dir:
 > tree -d
    
 - **git**:   
-1. to remove a wrong pushed commit to github, first `git log` then `git push origin +[commit_id]:main`. `+` is to force push.
-2. That was remote change, to locally change to, for example, the last commit: `git reset HEAD~`
+1. to remove a wrong pushed commit to github, first `git log` then (`+` is to force push):   
+  > git push origin +[commit_id]:main       
+2. That was remote change, to locally change to, for example, the last commit:   
+ > git reset HEAD~
 3. now add and commit as usual :)
