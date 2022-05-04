@@ -1,7 +1,6 @@
 # What_I_learned_today
 A  casual blog to record things I learned on internet related to programming.
 
-
 Timeless sources:   
 - https://github.com/Asabeneh/30-Days-Of-JavaScript   
 - https://github.com/leonardomso/33-js-concepts   
@@ -207,6 +206,7 @@ To force modification, add this line `app.config['TEMPLATES_AUTO_RELOAD'] = True
 Note: this will NOT auto-refresh, but only auto-reload. This makes Flask unattractive for developing websites, but good and quick enough to run apis and tests on python.   
    
 3/5/2022   
+### Redis In Windows
 - to use `Redis` in `windows`, install WLS (Windows Subsystem for Linux): https://docs.microsoft.com/en-us/windows/wsl/install   
 After that, open up a terminal in WSL (in `+` of VS Code's Terminal panel):   
 1. run `sudo apt-get install redis`. If encountered `E: Unable to locate package redis` error, then update using `sudo apt-get update`.   
@@ -290,4 +290,6 @@ Now you can use to get your tree dir:
   > git push origin +[commit_id]:main       
 2. That was remote change, to locally change to, for example, the last commit:   
  > git reset HEAD~
-3. now add and commit as usual :)
+3. now add and commit as usual :)   
+
+- **Markdown and relative path**: click the links to learn about how to [Link in Markdown](https://stackoverflow.com/a/16426829/11330560) and [use relative path in them](https://github.community/t/link-to-a-section-in-another-readme-md-file/1130).
