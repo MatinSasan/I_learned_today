@@ -275,4 +275,12 @@ Here, `frozen=True` makes the objects of the class immutable, `constants` (not t
 @dataclass(kw_only=True)
 ```
 Initalizing the class is only allowed with keyword arguments, with `kw_only=True`.
-> bear in mind that, `@dataclass` is a regular decorator, while `@dataclass([args])` is a callable that returns a decorator.
+- bear in mind that, `@dataclass` is a regular decorator, while `@dataclass([args])` is a callable that returns a decorator.   
+
+4/5/2022   
+- to get a `tree directory` representation, that can be used in `readme.md`, first install `tree` on Linux or WSL:   
+
+> sudo apt install tree   
+
+Now you can use to get your tree dir:   
+> tree -d
