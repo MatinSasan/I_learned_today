@@ -292,4 +292,21 @@ Now you can use to get your tree dir:
  > git reset HEAD~
 3. now add and commit as usual :)   
 
-- **Markdown and relative path**: click the links to learn about how to [Link in Markdown](https://stackoverflow.com/a/16426829/11330560) and [use relative path in them](https://github.community/t/link-to-a-section-in-another-readme-md-file/1130).
+- **Markdown and relative path**: click the links to learn about how to [Link in Markdown](https://stackoverflow.com/a/16426829/11330560) and [use relative path in them](https://github.community/t/link-to-a-section-in-another-readme-md-file/1130).   
+
+5/5/2022
+### Docker In Windows   
+1. install `WSL2` on Windows.
+2. `wsl.exe -l -v` to check the version
+3. run `wsl --set-version [distroname] 2` if it's not `v2`, for me `ubuntu` was my distro.   
+
+- `Vmmem` the background process of Virtual Env for Docker will probably eat a lot of RAM by now.
+1. to limit VM's Ram usage, first close `wsl.exe -t ubuntu` or `wsl --shutdown`.
+2. navigate to `%UserProfile%` (paste it to the address bar of the win explorer).
+3. edit/add `%UserProfile%/.wslconfig`
+4. add the following lines in the file (memory=1GB, 2GB, 6GB, etc.):   
+```
+[wsl2]
+memory=2GB
+```
+5. restart Docker. Enjoy preserving your sanity :)
