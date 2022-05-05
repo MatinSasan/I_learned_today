@@ -333,3 +333,26 @@ wsl --import docker-desktop-data E:\docker-desktop\data E:\docker-desktop\docker
 - you can delete tar file now.
 - in this step, we may meet the error of cannot create a specific network. Just re-run the import command.
 6. Run Docker Desktop. You just saved your C drive from running out of space :)
+----- 
+5/5/2022
+#### some useful linux commands (windows wsl included)
+- `|` to pipe commands, which the second command takes as the input the output of the first command.
+- `cd -` to go back the previous directory. `cd` to go to the home dir.
+- `pushd [someDir]` to cache the previous dir to a stack, and `popd` to get back to that dir after navigating around.
+- `ctrl+l` cleans the terminal, while `reset` completely does that.
+- `ctrl+z` put a program/process to the background but freezes it, to keep it running use `bg`, and `fg` to bring it to the foregound.
+- `htop` opens up a monitor showing all the processes, programs going on as well as hardware usage.
+- forgot to put `sudo` while doing, e.g. `apt upgrade`? simply use `!!` in front, to avoid retyping: `sudo !!` 
+- `ctrl+r` to show up previously used command, `ctrl+r` again to go one step back.
+- `history` to show all recently used commands. you can `bang` to run one of those commands, like `!100` runs the 100th.
+- `HISTTIMEFORMAT="%Y-%m-%d %T "` (the space at the end is important) to add date to commands in `history`, at least from now on.   
+In the previous tip, it only stays with the current open session. to save it `nano ~/.bashrc` and add that line there to save globally.   
+Put a space in front of a command to not let it be included in `history`.
+- `ctrl+ +"` and '`ctrl+ -` to resize the terminal. `rest` to reset the size.
+- to chain two commands, use `;`, e.g. `ls -l; echo "hello"`.   
+While `&&` does the same, it prevents the next command to run, if the first command fails.
+- `tail -f` to monitor changes in a file. It does not monitor changes in the middle of using the file.
+- `truncate`: The truncate command effectively eliminates all the contents of a file. E.g. `truncate -s 0 test.txt`, size set to zero.   
+It does not delete the file itelf, but leaves it as a zero-byte file on the disk.   
+The file permissions and ownership will be preserved if you use the truncate command.
+- `column`: e.g. `mount | column -t` to make an output look more human readable in an organized way.
