@@ -377,4 +377,10 @@ SET /P server="Server [%server%]: "
 ```
 - `psql`: 
 `dbname=#` could change to `dbname-#` by accident, not allowing you to excute any command.   
-To fix that, either hit <kbd>enter</kbd> to finish the command or press <kbd>ctrl</kbd>+<kbd>C</kbd> to terminate and start over.
+To fix that, either hit <kbd>enter</kbd> to finish the command or press <kbd>ctrl</kbd>+<kbd>C</kbd> to terminate and start over.   
+   
+- `psql` default user win 10:   
+`psql` uses the win's default user which is not the same as default postgres user, usually `postgres`, asking for password, which fails.
+1. go to `Environment variables`, and then `System variable`.
+2. add `PGUSER` as variable, and `postgres` as value.
+3. now `psql` won't act stupid (this is for casual use and practicing with Postgres, otherwise one shouldn't mess with it AFAIK).
