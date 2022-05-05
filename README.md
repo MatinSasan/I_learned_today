@@ -356,3 +356,22 @@ While `&&` does the same, it prevents the next command to run, if the first comm
 It does not delete the file itelf, but leaves it as a zero-byte file on the disk.   
 The file permissions and ownership will be preserved if you use the truncate command.
 - `column`: e.g. `mount | column -t` to make an output look more human readable in an organized way.
+   
+----  
+6/5/2022   
+   
+- **Postgres Win 10 Terminal (cmd)**:   
+to fix `Console code page (437) differs from Windows code page (1252)`, add `cmd.exe /c chcp 1252 command` to `psql.bat` in `postgres\scripts`.   
+In should be at the near top, the right location, shown below:
+```bat
+@echo off
+
+REM Copyright (c) 2012-2014, EnterpriseDB Corporation.  All rights reserved
+
+REM PostgreSQL server psql runner script for Windows
+
+cmd.exe /c chcp 1252
+
+SET server=localhost
+SET /P server="Server [%server%]: "
+```
