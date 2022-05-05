@@ -375,3 +375,6 @@ cmd.exe /c chcp 1252
 SET server=localhost
 SET /P server="Server [%server%]: "
 ```
+- `psql`: 
+`dbname=#` could change to `dbname-#` by accident, not allowing you to excute any command.   
+To fix that, either hit <kbd>enter</kbd> to finish the command or press <kbd>ctrl</kbd>+<kbd>C</kbd> to terminate and start over.
