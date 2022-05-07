@@ -384,3 +384,10 @@ To fix that, either hit <kbd>enter</kbd> to finish the command or press <kbd>ctr
 1. go to `Environment variables`, and then `System variable`.
 2. add `PGUSER` as variable, and `postgres` as value.
 3. now `psql` won't act stupid (this is for casual use and practicing with Postgres, otherwise one shouldn't mess with it AFAIK).
+----
+7/5/2022   
+   
+### Laravel setup   
+- instead of using `XAMPP`, there are 2 easier ways to set up a new laravel project:   
+1. using **Laravel Sail** via Docker: `curl -s https://laravel.build/example-app | bash`, `cd example-app`, then `./vendor/bin/sail up`.
+2. using **Laragon**: a fast, portable, light tool.
