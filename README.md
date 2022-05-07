@@ -391,3 +391,5 @@ To fix that, either hit <kbd>enter</kbd> to finish the command or press <kbd>ctr
 - instead of using `XAMPP`, there are 2 easier ways to set up a new laravel project:   
 1. using **Laravel Sail** via Docker: `curl -s https://laravel.build/example-app | bash`, `cd example-app`, then `./vendor/bin/sail up`.
 2. using **Laragon**: a fast, portable, light tool.
+----   
+- to rename `git`'s global default brranch from `master` to `main`, simply run: `git config --global init.defaultBranch main`   
