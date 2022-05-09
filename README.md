@@ -396,3 +396,6 @@ To fix that, either hit <kbd>enter</kbd> to finish the command or press <kbd>ctr
    
 8/5/2022   
 - to shift the behavior of `merge` in `git` from `fast-forward` to `three-way`, run (`--global` for all): `git config ff no`
+----   
+9/5/2022   
+- **git**: `commits` are immmutable.
