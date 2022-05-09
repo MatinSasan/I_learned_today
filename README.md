@@ -399,3 +399,10 @@ To fix that, either hit <kbd>enter</kbd> to finish the command or press <kbd>ctr
 ----   
 9/5/2022   
 - **git**: `commits` are immmutable.
+----
+9/5/2022  
+### Docker: Tag, Push
+- To rename a tag, e.g. from `server` to `myname/server`:   
+`docker image tag server:latest myname/server:latest` or `docker image tag d583c3ac45fd myname/server:latest`.   
+`docker rmi server`, removes the older tag without removing the image itself. `:latest` can be omitted, if there's only one image's tag.
+- To push to `Docker Hub`, the name of the image must be right, so `server` should be `myDockerUser/server`.
