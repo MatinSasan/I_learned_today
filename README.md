@@ -406,3 +406,26 @@ To fix that, either hit <kbd>enter</kbd> to finish the command or press <kbd>ctr
 `docker image tag server:latest myname/server:latest` or `docker image tag d583c3ac45fd myname/server:latest`.   
 `docker rmi server`, removes the older tag without removing the image itself. `:latest` can be omitted, if there's only one image's tag.
 - To push to `Docker Hub`, the name of the image must be right, so `server` should be `myDockerUser/server`.
+----
+10/5/2022
+### Ubuntu (WSL2)   
+**Move WSL 2 file system to another drive**:   
+1. export Ubuntu:
+- `mkdir D:\backup`
+- `wsl --export Ubuntu D:\backup\ubuntu.tar`
+2. Unregister the same distribution to remove it from the C: drive:
+- `wsl --unregister Ubuntu`
+3. import Ubuntu:
+- `mkdir D:\wsl`
+- `wsl --import Ubuntu D:\wsl\ D:\backup\ubuntu.tar`
+4. By default Ubuntu will use root as the default user, to switch back to previous user:
+- `cd %userprofile%\AppData\Local\Microsoft\WindowsApps`
+- `ubuntu config --default-user <username>`
+- (for docker perhaps: `wsl --set-default Ubuntu-20.04 `)   
+   
+**Updating Ubuntu (to 20.4)**:
+1. `sudo apt update`
+2. `sudo apt upgrade`
+3. `sudo apt dist-upgrade`
+4. `sudo apt autoremove`
+5. `sudo do-release-upgrade` (before that you need to reboot Ubuntu: Services.msc -> restart `LXSSMANAGER`.
