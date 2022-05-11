@@ -429,3 +429,17 @@ To fix that, either hit <kbd>enter</kbd> to finish the command or press <kbd>ctr
 3. `sudo apt dist-upgrade`
 4. `sudo apt autoremove`
 5. `sudo do-release-upgrade` (before that you need to reboot Ubuntu: Services.msc -> restart `LXSSMANAGER`.
+---- 
+11/5/2022   
+> `docker run -it ubuntu`: `ubuntu` image's name, starts a NEW container,   
+> while `docker start -i [id]` runs already existing container by its id.
+### Setting up User for Docker Ubuntu as root:
+1. `useradd -m joe` (to check its existence: `cat /etc/passwd`)
+2. `usermod -s /bin/bash joe`, to set from shell to bash (`cat` the same dir to check).
+3. `docker ps [-a]` to get your container id. The first few letters suffice. `-a` includes not running containers.
+4. `docker start - i [id]` to start the container, if not.
+5. `docker exec -it -u joe [id] bash`: `-it` making it interactive, `-u` for user.
+6. now the user can interact with bash in parallel to root.   
+   
+> `-i`, `--interactive` keeps STDIN open even if not attached, which you need if you want to type any command at all.   
+> `-t`, `--tty` Allocates a pseudo-TTY, a pseudo terminal which connects a user's "terminal" with stdin and stdout. 
