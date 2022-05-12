@@ -462,10 +462,13 @@ To fix that, either hit <kbd>enter</kbd> to finish the command or press <kbd>ctr
 ### Docker: cleaning up unused containers and images
 - containers and images are permenant.   
 Any rebuild creates a new container-instance (upon `docker run`) and a new image, which leaves the previous image as a dangling one.   
-> Dangling images are layers that have no relationship to any tagged images. They no longer serve a purpose and consume disk space.   
+
 - **to remove unused containers**:
 1. `docker ps -a`, grab the container's id
-2. `docker rm <id>` (`docker run --rm image_name` to automatically delete when it exits)
+2. `docker rm <id>` to remove any container, also `docker container prune` to remove ALL stopped containers - be careful!
+> `docker run --rm image_name` to automatically delete when it exits   
+
 - **to remove unused images**:
-1. `docker images -a` and grab the id of any untaged dangling ones, or `docker images -f dangling=true` to only show them.
-2. `docker image prune` to remove dangling ones, or `docker rmi <id>` any image in general.  
+4. `docker images -a` and grab the id of any untaged dangling ones, or `docker images -f dangling=true` to only show them.
+5. `docker image prune` to remove dangling ones, or `docker rmi <id>` any image in general.   
+> Dangling images are layers that have no relationship to any tagged images. They no longer serve a purpose and consume disk space.  
