@@ -472,3 +472,38 @@ Any rebuild creates a new container-instance (upon `docker run`) and a new image
 4. `docker images -a` and grab the id of any untaged dangling ones, or `docker images -f dangling=true` to only show them.
 5. `docker image prune` to remove dangling ones, or `docker rmi <id>` any image in general.   
 > Dangling images are layers that have no relationship to any tagged images. They no longer serve a purpose and consume disk space.  
+   
+----   
+13/5/2022   
+### Docker: volume and sharing the source code with a container   
+- to keep data persistent, as with removal of a container, data will also be removed.   
+So we need a `volume` created within Docker virtual space.
+- in production, one should always `build` upon changing source code, but in `development` it's painful.   
+So we need to map it to the container.   
+   
+In the following example, the working directory is assumed to be `/app`:   
+
+> Docker run -d -p 5000:3000 -v $(pwd):/app -v someVolume:/app/data someApp   
+   
+- `-d` makes the container start in `detached` mode, putting it in the background, and to interact with the same terminal.
+- `-p` stands for `port` where `5000` is some port for host and `3000` is the port we exposed with Docker.   
+This will allow us to connect with a running app via the port.   
+- `-v` stands for `volume`, and there are 2 use cases:   
+   
+1- to keep data persisten and map it within Docker virtual space.   
+`someVolumee`: any desired name to store our data. It can be created manually or automatically.   
+`:/app/data`: it's the location of our data, and should be given the right permission to be able to access:   
+
+```dockerfile  
+...
+RUN addgroup app && adduser
+USER app
+WORKDIR /app
+RUN mkdir data
+...
+
+```
+   
+2- to share the source code with a container, as `docker cp` would be tedious to do manually every time.   
+`$(pwd)`: our current directory, wrapped within `$(...)` to indicate to Docker that it's a command.
+`:/app`: the location where the app resides to map to, so that we can see the immediate change in `development`.   
