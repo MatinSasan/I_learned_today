@@ -490,7 +490,7 @@ In the following example, the working directory is assumed to be `/app`:
 This will allow us to connect with a running app via the port.   
 - `-v` stands for `volume`, and there are 2 use cases:   
    
-1- to keep data persisten and map it within Docker virtual space.   
+1. to keep data persisten and map it within Docker virtual space.   
 `someVolumee`: any desired name to store our data. It can be created manually or automatically.   
 `:/app/data`: it's the location of our data, and should be given the right permission to be able to access:   
 
@@ -504,6 +504,10 @@ RUN mkdir data
 
 ```
    
-2- to share the source code with a container, as `docker cp` would be tedious to do manually every time.   
-`$(pwd)`: our current directory, wrapped within `$(...)` to indicate to Docker that it's a command.
+2. to share the source code with a container, as `docker cp` would be tedious to do manually every time.   
+`$(pwd)`: our current directory, wrapped within `$(...)` to indicate to Docker that it's a command.   
 `:/app`: the location where the app resides to map to, so that we can see the immediate change in `development`.   
+
+----   
+14/5/2022   
+- in `VS Code` to select the word at the cursor, press `ctrl+D`. Pressing it more will select more of such word.
