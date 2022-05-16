@@ -1,4 +1,4 @@
-# What_I_learned_today
+# what-is-learned-today
 A  casual blog to record things I learned on internet related to programming.
 
 Timeless sources:   
