@@ -511,3 +511,9 @@ RUN mkdir data
 ----   
 14/5/2022   
 - in `VS Code` to select the word at the cursor, press `ctrl+D`. Pressing it more will select more of such word.
+
+----
+21/11/2023
+#### Useful VS Code shortcuts to remember:
+- `ctrl+space`: trigger suggest/autocomplete
+- `alt+esc`: toggle between windows(shows only the ones that are not minimized).
