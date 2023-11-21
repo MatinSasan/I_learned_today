@@ -517,3 +517,4 @@ RUN mkdir data
 #### Useful VS Code shortcuts to remember:
 - `ctrl+space`: trigger suggest/autocomplete
 - `alt+esc`: toggle between windows(shows only the ones that are not minimized).
+- `ctrl+B`: sidebar visibility toggle
