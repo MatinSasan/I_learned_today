@@ -518,3 +518,22 @@ RUN mkdir data
 - `ctrl+space`: trigger suggest/autocomplete
 - `alt+esc`: toggle between windows(shows only the ones that are not minimized).
 - `ctrl+B`: sidebar visibility toggle
+
+----
+8/3/2024
+#### snippet of deepclone
+
+```js
+const deepClone = (obj) => {
+  if (typeof obj !== 'object' || obj === null) return obj;
+
+  const newObject = Array.isArray(obj) ? [] : {};
+
+  for (let key in obj) {
+    const value = obj[key];
+    newObject[key] = deepClone(value);
+  }
+
+  return newObject;
+};
+```
